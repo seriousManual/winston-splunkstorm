@@ -1,0 +1,27 @@
+{
+    "name": "winston-splunkstorm",
+    "version": "0.1.0",
+    "description": "Winston transport for splunkstorm",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha"
+    },
+    "dependencies": {
+        "splunkstorm": "0.1.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:nherment/winston-splunkstorm.git"
+    },
+    "keywords": [
+        "splunk",
+        "splunkstorm",
+        "winston",
+        "transport",
+        "logging",
+        "log",
+        "logger"
+    ],
+    "author": "Nicolas Herment <nherment@gmail.com>",
+    "license": "MIT License"
+}
