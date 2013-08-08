@@ -1,6 +1,6 @@
 {
     "name": "winston-splunkstorm",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "description": "Winston transport for splunkstorm",
     "main": "index.js",
     "scripts": {
