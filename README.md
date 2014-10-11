@@ -1,53 +1,43 @@
-Winston Splunkstorm
-===================
+# winston-splunkstorm [![Build Status](https://travis-ci.org/zaphod1984/winston-splunkstorm.png)](https://travis-ci.org/zaphod1984/winston-splunkstorm)
 
-Splunkstorm transport for Winston
+[![NPM](https://nodei.co/npm/winston-splunkstorm.png)](https://nodei.co/npm/winston-splunkstorm/)
 
-Quick start
-===========
+[![NPM](https://nodei.co/npm-dl/winston-splunkstorm.png?months=3)](https://nodei.co/npm/winston-splunkstorm/)
 
-Install
--------
+In their [Logging Best Practises](http://dev.splunk.com/view/logging-best-practices/SP-CAAADP6) Splunk strongly encourages the usage of key-value pairs in logs.
+This [winston](https://github.com/flatiron/winston) plugin takes messages and meta data hashes and creates a key-value structured string out of it.
 
-    npm install winston-splunkstorm
+## Installation
 
+````
+npm install winston-splunkstorm
+````
 
-Use
----
+## Example Usage
 
-    var winston         = require("winston")
-    var SplunkStorm     = require("winston-splunkstorm")
+````javascript
+var winston = require('winston');
+var splunkstorm = require('winston-splunkstorm');
 
-    winston.add(SplunkStorm, {
-        apiKey: "API_KEY",
-        projectId: "PROJECT_ID"
-    })
+winston.add(splunkstorm, {
+    apiKey: 'api-key',
+    projectId: 'project-id',
+    apiHostName: 'api-host-name'
+});
 
-    winston.info("Hello Splunk Storm")
+winston.info({a: 'b'});
 
+//output: 2013-12-09T07:10:49.522Z a=b, lvl=info, hst=fooHost
+````
 
+### Parameters for the splunkstorm constructor:
 
-License
-=======
+* `apiKey` your apiKey at splunkstorm.com (mandatory)
+* `projectId` your projectId at splunkstorm.com (mandatory)
+* `apiHostName` the hostname assigned to your project by splunkStorm
 
-The MIT License (MIT)
+Find more Details [here](https://github.com/zaphod1984/splunkstorm).
 
-Copyright (c) 2013 Nicolas Herment
+Built with [splunkstorm](https://www.npmjs.org/package/splunkstorm) the client for the splunkstorm api.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+Happy Logging!

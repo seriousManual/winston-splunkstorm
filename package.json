@@ -1,27 +1,43 @@
 {
-    "name": "winston-splunkstorm",
-    "version": "0.1.2",
-    "description": "Winston transport for splunkstorm",
-    "main": "index.js",
-    "scripts": {
-        "test": "mocha"
-    },
-    "dependencies": {
-        "splunkstorm": "0.1.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:nherment/winston-splunkstorm.git"
-    },
-    "keywords": [
-        "splunk",
-        "splunkstorm",
-        "winston",
-        "transport",
-        "logging",
-        "log",
-        "logger"
-    ],
-    "author": "Nicolas Herment <nherment@gmail.com>",
-    "license": "MIT License"
+  "name": "winston-splunkstorm",
+  "version": "0.1.2",
+  "description": "splunkstorm transport for winston",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zaphod1984/winston-splunkstorm.git"
+  },
+  "keywords": [
+    "splunk",
+    "splunkstorm",
+    "winston",
+    "transport",
+    "logging",
+    "logs",
+    "log aggregation"
+  ],
+  "author": "Manuel Ernst <zaphod84@gmx.de>",
+  "contributors": [
+    "Nicolas Herment <nherment@gmail.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zaphod1984/winston-splunkstorm/issues"
+  },
+  "dependencies": {
+    "splunkstorm": "^1.0.0"
+  },
+  "peerDependencies": {
+    "winston": ">=0.7"
+  },
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "mocha": "^1.21.4",
+    "sinon": "^1.10.3",
+    "sinon-chai": "^2.6.0",
+    "winston": "^0.8.1"
+  }
 }
