@@ -28,7 +28,7 @@
     "url": "https://github.com/zaphod1984/winston-splunkstorm/issues"
   },
   "dependencies": {
-    "splunkstorm": "^1.0.0"
+    "splunkstorm": "^2.0.1"
   },
   "peerDependencies": {
     "winston": ">=0.7"
