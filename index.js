@@ -13,7 +13,7 @@ var HOST_KEY = 'hst';
  * @constructor
  */
 var WinstonSplunkstorm = function (options) {
-    winston.Transport.call(this);
+    winston.Transport.call(this, options);
 
     options = options || {};
 
